@@ -5,6 +5,10 @@ import {setupReduxConnection} from "../../redux";
 
 class LoginPage extends Component {
   render() {
+    let {isMounted} = this.props.entry;
+
+    console.log("are we mounted?", isMounted);
+
     return (
       <div>
         <LoginModal ref={(e) => this.loginModel = e} />
